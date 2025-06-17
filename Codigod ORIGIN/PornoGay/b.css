@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+}
+
+.container {
+    background-color: azure;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1)
+}
+
+input[type ="date"] {
+    padding: 8px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #fade24;
+
+}
+

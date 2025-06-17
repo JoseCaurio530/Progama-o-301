@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    gap: 5px;
+    padding: 8px;
+}
+
+.iten4 {
+    background-color: crimson;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.iten3 {
+    background-color: goldenrod;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}  
+
+.iten2 {
+    background-color: aqua;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.iten1 {
+   background-color: greenyellow;
+   grid-column: 2 / 3;
+   grid-row: 2 / 3;
+}

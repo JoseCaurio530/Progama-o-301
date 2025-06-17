@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    display: grid;
+    background-color: rgb(241, 47, 47);
+    text-align: center;
+    border-width: 10px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    padding: 10px;
+}
+
+
+.content-box {
+    border-radius: 10px;
+}

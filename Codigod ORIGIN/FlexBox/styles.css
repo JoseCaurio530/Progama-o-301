@@ -1,0 +1,10 @@
+body {
+    background-color:yellowgreen
+}
+
+header {
+    display: flex;
+    border: 50px;
+    background-color: antiquewhite;
+    
+}

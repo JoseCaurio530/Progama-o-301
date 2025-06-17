@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Define o conjunto de caracteres -->
+  <meta charset="UTF-8" />
+
+  <!-- Define o comportamento responsivo em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Descrição da página para SEO -->
+  <meta name="description" content="Exemplo completo de HTML5" />
+
+  <!-- Título da aba do navegador -->
+  <title>Exemplo Completo de HTML5</title>
+
+  <!-- Link para o arquivo CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Link para o arquivo JavaScript externo (executa após carregar a página) -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Cabeçalho principal da página -->
+  <header>
+    <h1>Minha Página Completa em HTML</h1>
+
+    <!-- Navegação do site -->
+    <nav>
+      <ul>
+        <!-- Links de navegação -->
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal da página -->
+  <main>
+
+    <!-- Seção de introdução -->
+    <section id="inicio">
+      <h2>Bem-vindo!</h2>
+      <p>Esta página demonstra vários elementos HTML organizados.</p>
+
+      <!-- Imagem com legenda -->
+      <figure>
+        <img src="exemplo.jpg" alt="Imagem de exemplo" width="300" />
+        <figcaption>Imagem de exemplo</figcaption>
+      </figure>
+    </section>
+
+    <!-- Seção "Sobre o projeto" -->
+    <section id="sobre">
+      <h2>Sobre o Projeto</h2>
+
+      <!-- Artigo com informações sobre o objetivo -->
+      <article>
+        <h3>Objetivo</h3>
+        <p>Exibir os principais recursos do HTML5 de forma estruturada e limpa.</p>
+
+        <!-- Texto adicional colapsável -->
+        <details>
+          <summary>Mais informações</summary>
+          <p>Este código é compatível com CSS e JavaScript.</p>
+        </details>
+      </article>
+
+      <!-- Lista de recursos usados -->
+      <article>
+        <h3>Recursos Usados</h3>
+        <ul>
+          <li>Elementos Semânticos</li>
+          <li>Formulários</li>
+          <li>Multimídia</li>
+          <li>Tabelas</li>
+          <li>Listas</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Barra lateral com informações extras -->
+    <aside>
+      <h2>Destaques</h2>
+      <!-- Lista ordenada -->
+      <ol>
+        <li>Compatível com CSS</li>
+        <li>Pronto para responsividade</li>
+        <li>HTML5 moderno</li>
+      </ol>
+    </aside>
+
+    <!-- Seção de mídias (vídeo e áudio) -->
+    <section id="multimidia">
+      <h2>Multimídia</h2>
+
+      <!-- Vídeo incorporado -->
+      <video controls width="300">
+        <source src="video.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+
+      <!-- Áudio incorporado -->
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+      </audio>
+    </section>
+
+    <!-- Tabela de exemplo -->
+    <section id="tabela">
+      <h2>Tabela de Dados</h2>
+      <table>
+        <!-- Título da tabela -->
+        <caption>Exemplo de Tabela</caption>
+
+        <!-- Cabeçalho da tabela -->
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+          </tr>
+        </thead>
+
+        <!-- Corpo da tabela -->
+        <tbody>
+          <tr>
+            <td>Ana</td>
+            <td>28</td>
+            <td>São Paulo</td>
+          </tr>
+          <tr>
+            <td>João</td>
+            <td>35</td>
+            <td>Rio de Janeiro</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulário de contato -->
+    <section id="formulario">
+      <h2>Formulário de Contato</h2>
+      <form action="#" method="post">
+        
+        <!-- Campo de texto -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <!-- Campo de email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Campo de data -->
+        <label for="data">Data de nascimento:</label>
+        <input type="date" id="data" name="data" />
+
+        <!-- Seletor de cor -->
+        <label for="cor">Cor favorita:</label>
+        <input type="color" id="cor" name="cor" />
+
+        <!-- Área de texto -->
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+        <!-- Grupo de botões tipo radio -->
+        <fieldset>
+          <legend>Preferência de contato:</legend>
+          <input type="radio" id="emailContato" name="contato" value="email" checked />
+          <label for="emailContato">Email</label>
+          <input type="radio" id="telefoneContato" name="contato" value="telefone" />
+          <label for="telefoneContato">Telefone</label>
+        </fieldset>
+
+        <!-- Checkbox -->
+        <input type="checkbox" id="novidades" name="novidades" />
+        <label for="novidades">Desejo receber novidades</label>
+
+        <!-- Botão de envio -->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer>
+    <p>&copy; 2025 Minha Página Completa. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

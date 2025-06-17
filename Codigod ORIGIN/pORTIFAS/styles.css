@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+    font-style: italic;
+    
+}
+
+body {
+font-family: Arial, sans-serif;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+line-height: 1.0;
+}
+
+main {                              
+    display: grid;
+    grid-template-columns: repeat(auto, 3);
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+    height: 300px; 
+}
+
+img {
+    height: 60%;
+}
+
+.cadastro {
+height: 300px;
+
+}
+
+.div {
+    text-align: center;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    gap: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+

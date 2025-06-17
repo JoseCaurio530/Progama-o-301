@@ -1,0 +1,240 @@
+/* ---------- Reset básico para tirar margens e paddings padrões ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclui padding e border na largura/altura total */
+}
+
+/* ---------- Variáveis CSS padrão (modo claro) ---------- */
+:root {
+  --bg-color: #f4f4f4;            /* Cor de fundo principal */
+  --text-color: #333;             /* Cor do texto principal */
+  --primary-color: #007BFF;       /* Cor principal (ex.: header, links) */
+  --secondary-color: #6c757d;     /* Cor secundária (ex.: cabeçalhos tabelas) */
+  --accent-color: #28a745;        /* Cor de destaque (botões, hover) */
+  --font-stack: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fonte usada */
+}
+
+/* ---------- Estilos para modo escuro - ativados pela classe .dark-mode no body ---------- */
+body.dark-mode {
+  --bg-color: #121212;            /* Fundo escuro */
+  --text-color: #f0f0f0;          /* Texto claro */
+  --primary-color: #0d6efd;       /* Cor primária para dark mode */
+  --secondary-color: #adb5bd;     /* Cor secundária para dark mode */
+  --accent-color: #198754;        /* Cor de destaque para dark mode */
+}
+
+/* ---------- Estilo base do body ---------- */
+body {
+  font-family: var(--font-stack); /* Aplica fonte definida */
+  background-color: var(--bg-color); /* Fundo baseado na variável */
+  color: var(--text-color);           /* Cor do texto baseada na variável */
+  line-height: 1.6;                   /* Espaçamento entre linhas */
+  padding: 20px;                     /* Espaçamento interno do body */
+  transition: background-color 0.4s ease, color 0.4s ease; /* Transição suave na troca de tema */
+}
+
+/* ---------- Estilo do cabeçalho ---------- */
+header {
+  background-color: var(--primary-color); /* Fundo colorido do header */
+  color: white;                           /* Texto branco */
+  padding: 20px;                         /* Espaçamento interno */
+  text-align: center;                    /* Centraliza o texto */
+  position: sticky;                      /* Fixa no topo ao rolar a página */
+  top: 0;                               /* Distância do topo */
+  z-index: 100;                         /* Fica acima de outros elementos */
+}
+
+/* ---------- Navegação principal ---------- */
+nav ul {
+  display: flex;                       /* Organiza os itens em linha */
+  justify-content: center;             /* Centraliza horizontalmente */
+  list-style: none;                    /* Remove marcador padrão */
+  margin-top: 10px;                    /* Espaço acima da lista */
+}
+
+nav ul li {
+  margin: 0 15px;                     /* Espaçamento lateral entre itens */
+}
+
+nav a {
+  color: white;                       /* Cor dos links */
+  text-decoration: none;              /* Remove sublinhado */
+  font-weight: bold;                  /* Negrito */
+  position: relative;                 /* Para posicionar o ::after */
+}
+
+/* Linha animada abaixo do link ao passar o mouse */
+nav a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: -5px;                      /* Posiciona logo abaixo do texto */
+  left: 0;
+  background: white;
+  transition: width 0.3s ease;       /* Animação suave */
+}
+
+nav a:hover::after {
+  width: 100%;                      /* Expande a linha ao hover */
+}
+
+/* ---------- Layout do conteúdo principal ---------- */
+main {
+  max-width: 1200px;                /* Limita largura máxima */
+  margin: 20px auto;                /* Centraliza horizontalmente com margem vertical */
+  display: grid;                   /* Usa grid layout */
+  gap: 40px;                      /* Espaço entre os elementos */
+}
+
+/* Estilos para seções, artigos e aside (barra lateral) */
+section, article, aside {
+  padding: 20px;                    /* Espaçamento interno */
+  border-radius: 10px;             /* Bordas arredondadas */
+  background-color: white;          /* Fundo branco */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra sutil */
+}
+
+/* Fundo escuro para modo dark (quando ativado) */
+body.dark-mode section,
+body.dark-mode article,
+body.dark-mode aside {
+  background-color: #1f1f1f;
+}
+
+/* ---------- Imagens e figura ---------- */
+figure {
+  text-align: center;              /* Centraliza a legenda */
+}
+
+img {
+  max-width: 100%;                 /* Responsivo, não ultrapassa container */
+  border-radius: 8px;              /* Bordas arredondadas */
+  transition: transform 0.3s ease; /* Transição para o efeito hover */
+}
+
+img:hover {
+  transform: scale(1.05);          /* Leve zoom ao passar o mouse */
+}
+
+/* ---------- Tabela ---------- */
+table {
+  width: 100%;                    /* Ocupa toda largura disponível */
+  border-collapse: collapse;      /* Remove espaços entre células */
+  margin-top: 10px;               /* Espaço acima da tabela */
+}
+
+th, td {
+  padding: 10px;                  /* Espaçamento interno das células */
+  border: 1px solid #ddd;         /* Borda fina cinza clara */
+}
+
+th {
+  background-color: var(--secondary-color); /* Fundo colorido para cabeçalho */
+  color: white;                              /* Texto branco no cabeçalho */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;    /* Cor de fundo alternada para linhas pares */
+}
+
+/* ---------- Formulário ---------- */
+form {
+  display: flex;               /* Layout flexível para os campos */
+  flex-direction: column;      /* Campos em coluna */
+  gap: 15px;                   /* Espaço entre campos */
+}
+
+/* Inputs, textarea, select e botão estilizados de forma consistente */
+input, textarea, select, button {
+  padding: 10px;
+  border: 1px solid #ccc;      /* Borda cinza clara */
+  border-radius: 6px;          /* Bordas arredondadas */
+  font-size: 1rem;
+}
+
+/* Foco nos inputs e textarea para melhor acessibilidade */
+input:focus, textarea:focus {
+  outline: none;               /* Remove contorno padrão */
+  border-color: var(--primary-color); /* Borda azul */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Sombra leve azul */
+}
+
+/* Botão estilizado */
+button {
+  background-color: var(--accent-color); /* Fundo verde */
+  color: white;                           /* Texto branco */
+  border: none;                          /* Sem borda */
+  cursor: pointer;                       /* Cursor de mão */
+  transition: background-color 0.3s ease; /* Transição suave no hover */
+}
+
+button:hover {
+  background-color: darkgreen;           /* Fundo verde escuro ao passar o mouse */
+}
+
+/* ---------- Barra lateral (aside) ---------- */
+aside {
+  border-left: 5px solid var(--primary-color); /* Barra colorida na lateral esquerda */
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+  text-align: center;                  /* Texto centralizado */
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--primary-color); /* Fundo azul */
+  color: white;
+  transition: background-color 0.4s ease;
+}
+
+/* ---------- Animação simples para as seções ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Aplica animação de fadeIn às seções, artigos e aside */
+section, article, aside {
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* ---------- Responsividade ---------- */
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;    /* Navegação em coluna */
+  }
+
+  main {
+    grid-template-columns: 1fr; /* Conteúdo ocupa uma coluna */
+  }
+}
+
+/* Para telas maiores que 769px */
+@media (min-width: 769px) {
+  main {
+    grid-template-columns: 2fr 1fr; /* Conteúdo em duas colunas (conteúdo + aside) */
+  }
+}
+
+/* ---------- Botão para alternar o modo claro/escuro ---------- */
+#toggle-theme {
+  position: fixed;                   /* Fixo na tela */
+  top: 20px;                        /* Distância do topo */
+  right: 20px;                      /* Distância da direita */
+  background-color: var(--accent-color); /* Fundo verde */
+  border: none;                     /* Sem borda */
+  color: white;                     /* Texto branco */
+  padding: 10px 15px;               /* Espaçamento interno */
+  border-radius: 8px;               /* Bordas arredondadas */
+  cursor: pointer;                  /* Cursor de mão */
+  font-weight: bold;                /* Negrito */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#toggle-theme:hover {
+  background-color: darkgreen;       /* Fundo mais escuro ao passar o mouse */
+}

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header, footer {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    font-weight: 100vh;
+    padding: 15px;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(158, 158, 158);
+    color: aliceblue;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
